@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test de Inglés</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <div class="container">
+
+    <!-- Título -->
+    <h1 class="titulo">🌍 Aprende Inglés - Test por Niveles</h1>
+  
+    <!-- Sección niveles -->
+    <div id="niveles" class="niveles">
+      <h2>Selecciona tu nivel:</h2>
+      <button onclick="iniciarTest('A1')" class="btn-nivel">Nivel A1 🟢</button>
+      <button onclick="iniciarTest('A2')" class="btn-nivel">Nivel A2 🔵</button>
+      <button onclick="iniciarTest('B1')" class="btn-nivel">Nivel B1 🟡</button>
+      <button onclick="iniciarTest('B2')" class="btn-nivel">Nivel B2 🟠</button>
+      <button onclick="iniciarTest('C1')" class="btn-nivel">Nivel C1 🔴</button>
+      <button onclick="iniciarTest('C2')" class="btn-nivel">Nivel C2 ⚫</button>
+    </div>
+
+    <!-- Sección test -->
+    <div id="test" class="hidden">
+      <h2 id="nivelTitulo"></h2>
+      <div id="pregunta"></div>
+      <div id="opciones"></div>
+      <button id="btnSiguiente" class="hidden" onclick="siguientePregunta()">➡️ Siguiente</button>
+    </div>
+
+    <!-- Sección resultados -->
+    <div id="resultado" class="hidden">
+      <h3 id="score"></h3>
+      <div id="detalles"></div>
+      <button id="btnNuevoTest" class="hidden" onclick="nuevoTest()">🔄 Nuevo Test</button>
+    </div>
+
+  </div>
+  <script src="preguntas.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,275 @@
+/* Botones de niveles */
+.btn-nivel {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  padding: 12px;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  color: white;
+  transition: transform 0.2s, background 0.3s;
+}
+
+.btn-nivel:hover {
+  transform: scale(1.05);
+}
+
+/* Colores por nivel */
+.btn-nivel:nth-child(1) { background: #28a745; } /* A1 verde */
+.btn-nivel:nth-child(2) { background: #007bff; } /* A2 azul */
+.btn-nivel:nth-child(3) { background: #ffc107; } /* B1 amarillo */
+.btn-nivel:nth-child(4) { background: #fd7e14; } /* B2 naranja */
+.btn-nivel:nth-child(5) { background: #dc3545; } /* C1 rojo */
+.btn-nivel:nth-child(6) { background: #403444; } /* C2 negro */
+.btn-nivel:nth-child(7) { background: #641081; } /* C2 negro */
+
+/* Botón siguiente */
+#btnSiguiente {
+  background: #007bff;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+/* Botón nuevo test */
+#btnNuevoTest {
+  background: red;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+
+/* === OPCIONES DE RESPUESTA === */
+.opcion-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  gap: 8px;
+}
+
+.opcion {
+  flex: 1;
+  padding: 12px;
+  border: 2px solid #007bff;
+  border-radius: 8px;
+  background-color: #f8f9fa;
+  cursor: pointer;
+  text-align: left;
+  font-size: 16px;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.opcion:hover {
+  background-color: #e9ecef;
+  transform: scale(1.02);
+}
+
+.opcion.seleccionado {
+  background-color: #d1e7dd;
+  border-color: #198754;
+}
+
+/* === BOTONES DE AUDIO === */
+.btn-audio {
+  padding: 6px 10px;
+  font-size: 16px;
+  border: none;
+  background-color: #ffcc00;
+  color: #000;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.btn-audio:hover {
+  background-color: #e6b800;
+  transform: scale(1.1);
+}
+
+/* === BOTONES DE AUDIO EN RESULTADOS === */
+#detalles button {
+  margin-left: 6px;
+  padding: 5px 9px;
+  font-size: 14px;
+  border: none;
+  background-color: #17a2b8;
+  color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+#detalles button:hover {
+  background-color: #117a8b;
+}
+
+/* === CONTENEDOR DE RESULTADOS === */
+#resultado {
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  background: linear-gradient(135deg, #f0f9ff, #e0f7fa);
+  color: #333;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* === DETALLES DE CADA RESPUESTA === */
+#detalles {
+  margin-top: 15px;
+  padding: 15px;
+  border-radius: 10px;
+  background: #f9f9f9;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* === RESPUESTA CORRECTA === */
+.correcta {
+  background-color: #d4edda;
+  border-left: 6px solid #28a745;
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  color: #155724;
+  font-weight: bold;
+  position: relative;
+}
+
+.correcta::before {
+  content: "✔️ Correcto:";
+  margin-right: 8px;
+  font-weight: bold;
+  color: #28a745;
+}
+
+/* === RESPUESTA INCORRECTA === */
+.incorrecta {
+  background-color: #f8d7da;
+  border-left: 6px solid #dc3545;
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  color: #721c24;
+  font-weight: bold;
+  position: relative;
+}
+
+.incorrecta::before {
+  content: "❌ Incorrecto:";
+  margin-right: 8px;
+  font-weight: bold;
+  color: #dc3545;
+}
+
+/* === MOSTRAR LA RESPUESTA CORRECTA DESPUÉS DE ERROR === */
+.respuesta-correcta {
+  background-color: #fff3cd;
+  border-left: 6px solid #ffc107;
+  padding: 10px;
+  border-radius: 6px;
+  margin-top: 6px;
+  font-size: 15px;
+  color: #856404;
+}
+
+.respuesta-correcta::before {
+  content: "👉 Respuesta correcta:";
+  font-weight: bold;
+  margin-right: 6px;
+  color: #ff9800;
+}
+
+/* === PRONUNCIACIÓN CON AUDIO === */
+.pronunciacion {
+  margin-top: 6px;
+  font-size: 14px;
+  font-style: italic;
+  color: #555;
+}
+
+.pronunciacion button {
+  margin-left: 8px;
+  padding: 5px 9px;
+  font-size: 14px;
+  border: none;
+  background-color: #17a2b8;
+  color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.pronunciacion button:hover {
+  background-color: #117a8b;
+}
+
+/* === EFECTO DE ENTRADA (animación) === */
+#detalles .correcta,
+#detalles .incorrecta {
+  animation: fadeIn 0.7s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Tarjetas de resultados bonitas */
+.correcta {
+  background:#d4edda; border-left:6px solid #28a745; color:#155724;
+  padding:12px; border-radius:10px; margin-bottom:10px; animation:fadeIn .5s ease;
+}
+.incorrecta {
+  background:#f8d7da; border-left:6px solid #dc3545; color:#721c24;
+  padding:12px; border-radius:10px; margin-bottom:10px; animation:fadeIn .5s ease;
+}
+.respuesta-correcta {
+  margin-top:6px; background:#fff3cd; border-left:6px solid #ffc107;
+  padding:8px; border-radius:8px; color:#856404;
+}
+@keyframes fadeIn { from{opacity:0; transform:translateY(6px)} to{opacity:1; transform:translateY(0)} }
+
+
+/* === RESPONSIVE MÓVIL === */
+@media (max-width: 600px) {
+  .niveles button {
+    font-size: 16px;
+    padding: 12px;
+  }
+
+  .opcion {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  #siguienteBtn,
+  #nuevoTestBtn {
+    font-size: 14px;
+    padding: 10px 16px;
+  }
+
+  .btn-audio {
+    font-size: 14px;
+    padding: 5px 8px;
+  }
+
+  #detalles button {
+    font-size: 12px;
+    padding: 3px 6px;
+  }
+}
