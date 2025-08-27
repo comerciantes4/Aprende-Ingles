@@ -200,3 +200,4 @@ function reiniciarVistaTest() {
   // Ocultar botones de niveles cuando empieza un test
   document.querySelector(".niveles").classList.add("hidden");
 }
+
